@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "audionotes": {
+      "type": "http",
+      "url": "https://api.audionotes.app/mcp"
+    }
+  }
+}

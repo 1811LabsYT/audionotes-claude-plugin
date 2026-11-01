@@ -1,0 +1,16 @@
+{
+  "name": "audionotes",
+  "version": "1.0.0",
+  "description": "Retrieve source notes from your Audionotes library.",
+  "author": {
+    "name": "Audionotes",
+    "url": "https://www.audionotes.app"
+  },
+  "homepage": "https://www.audionotes.app",
+  "repository": "https://github.com/1811LabsYT/audionotes-claude-plugin",
+  "privacyPolicyUrl": "https://www.audionotes.app/privacypolicy",
+  "license": "MIT",
+  "keywords": ["notes", "transcripts", "meetings", "retrieval"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "audionotes",
+  "owner": {
+    "name": "Audionotes"
+  },
+  "metadata": {
+    "description": "Audionotes plugins for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "audionotes",
+      "source": "./plugins/audionotes",
+      "description": "Retrieve source notes from your Audionotes library."
+    }
+  ]
+}
