@@ -1,8 +1,8 @@
 # Audionotes MCP server and plugin
 
 Search and read your [Audionotes](https://www.audionotes.app) voice notes,
-meeting transcripts and AI summaries from Claude, Cursor, VS Code, LobeChat,
-Hermes Agent or any other MCP client. Ask "What did we decide about pricing in
+meeting transcripts and AI summaries from Claude, Cursor, VS Code, Hermes
+Agent or any other MCP client. Ask "What did we decide about pricing in
 last week's call?" and your assistant searches your notes, reads the relevant
 parts and cites the notes it used.
 
@@ -104,11 +104,6 @@ Add the server to `.vscode/mcp.json` in your workspace:
   }
 }
 ```
-
-### LobeChat
-
-Install Audionotes from the LobeHub plugin market, or add a custom MCP plugin
-with the Streamable HTTP URL `https://api.audionotes.app/mcp`.
 
 ### Hermes Agent
 
