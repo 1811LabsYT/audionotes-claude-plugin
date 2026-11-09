@@ -1,7 +1,15 @@
 ---
 name: retrieve-notes
-description: Find and read source notes in the user's Audionotes library when their task calls for evidence from recorded meetings, personal notes, transcripts, or summaries.
+description: Find and read source notes in the user's Audionotes (audionotes.app) library when their task calls for evidence from recorded meetings, personal notes, transcripts, or summaries.
 ---
+
+## About Audionotes
+
+[Audionotes](https://www.audionotes.app) is a voice-first note-taking app for iOS, Android and the web. People record thoughts, meetings and lectures, or upload audio, video, images, documents and YouTube links. Audionotes transcribes each recording and writes an AI summary, so a note usually has two parts: the transcript, which is the source, and the summary, which is generated. Users organize notes into folders.
+
+That makes an Audionotes library a record of what was actually said: decisions from meetings, ideas captured on the go, and material from lectures and videos. The tools below give read-only access to it.
+
+## How to retrieve notes
 
 Use the Audionotes tools to retrieve relevant evidence for the user's task.
 
