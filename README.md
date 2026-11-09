@@ -112,6 +112,34 @@ with the Streamable HTTP URL `https://api.audionotes.app/mcp`.
 
 ### Hermes Agent
 
+You need Hermes Agent 0.21.6 or newer, and Node.js 20.18.1 or newer with `npx`
+on your `PATH`. Install the plugin from the Hermes plugin catalog:
+
+```sh
+hermes plugins install audionotes
+hermes plugins enable audionotes
+```
+
+Start a new session. The first time the server starts, your browser opens the
+Audionotes sign-in page. Sign in and approve read access. If the tools don't
+appear after you sign in, run `/reload-mcp`.
+
+The plugin package is in [`plugins/audionotes/`](plugins/audionotes): a
+`plugin.json`, an `mcp.json` and the `retrieve-notes` skill. Before you
+install, note that:
+
+- Every tool call goes to the hosted Audionotes server at
+  `api.audionotes.app`. Note titles, summaries and transcripts that match your
+  request enter the session and are sent to your model provider.
+- Sign-in runs the pinned `mcp-remote@0.1.49` through `npx`. On first use it
+  opens your browser and a local callback port, and it stores OAuth tokens
+  under `~/.mcp-auth`.
+- The package marks the server untrusted. All four tools are read-only, so
+  Hermes runs them without asking. They cannot change your notes.
+
+To connect without the plugin or Node.js, add the server directly. This adds
+the tools but not the skill:
+
 ```sh
 hermes mcp add audionotes --url https://api.audionotes.app/mcp --auth oauth
 ```

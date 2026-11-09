@@ -1,6 +1,7 @@
-# Audionotes for Claude
+# Audionotes for Claude and Hermes Agent
 
-Find and read your Audionotes recordings, transcripts and summaries from Claude.
+Find and read your Audionotes recordings, transcripts and summaries from Claude
+or Hermes Agent.
 Ask questions such as "What did we decide about pricing in last week's call?"
 and Claude searches your notes, reads the relevant parts and cites the notes it
 used.
@@ -32,6 +33,29 @@ You need a paid Audionotes account. Sign up at
 3. Review the consent page and approve read access (`notes:read`).
 
 Access covers every note you own, including notes you add later.
+
+## Hermes Agent
+
+This folder is also an Agent Plugins package for Hermes Agent: `plugin.json`,
+`mcp.json` and the `retrieve-notes` skill. You need Hermes Agent 0.21.6 or
+newer, and Node.js 20.18.1 or newer with `npx` on your `PATH`.
+
+```sh
+hermes plugins install audionotes
+hermes plugins enable audionotes
+```
+
+Start a new session and sign in to Audionotes when your browser opens. Before
+you install, note that:
+
+- Every tool call goes to the hosted Audionotes server at
+  `api.audionotes.app`. Note content that matches your request enters the
+  session and is sent to your model provider.
+- Sign-in runs the pinned `mcp-remote@0.1.49` through `npx`. On first use it
+  opens your browser and a local callback port, and it stores OAuth tokens
+  under `~/.mcp-auth`.
+- The package marks the server untrusted. All four tools are read-only, so
+  Hermes runs them without asking.
 
 ## Your data
 

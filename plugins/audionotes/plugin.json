@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "audionotes",
+  "version": "1.0.0",
+  "description": "Search and read your Audionotes voice notes, meeting transcripts and AI summaries from your agent. Read-only, OAuth sign-in, paid Audionotes account required.",
+  "author": {
+    "name": "Audionotes",
+    "url": "https://www.audionotes.app"
+  },
+  "homepage": "https://www.audionotes.app",
+  "repository": "https://github.com/1811LabsYT/audionotes-claude-plugin",
+  "license": "MIT",
+  "keywords": ["notes", "transcription", "meetings", "voice-notes", "mcp"],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "audionotes": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  }
+}
