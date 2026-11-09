@@ -5,6 +5,8 @@ description: Find and read source notes in the user's Audionotes library when th
 
 Use the Audionotes tools to retrieve relevant evidence for the user's task.
 
+If the Audionotes tools (`search_notes`, `list_notes`, `list_folders`, `get_note`) are not available, tell the user this skill needs the Audionotes MCP server at `https://api.audionotes.app/mcp` (Streamable HTTP, OAuth sign-in, paid Audionotes account), and point them to the setup steps for their app at <https://github.com/1811LabsYT/audionotes-claude-plugin#install>. Do not try to reach Audionotes another way.
+
 1. Search with `search_notes`. Preserve the user's explicit dates, note types and folders. Use `list_folders` to resolve folder IDs; do not guess IDs. Use `list_notes` when the user wants recent notes, an exact collection, or notes that search has not indexed. Keep `limit` within each tool's maximum: 20 for `search_notes`, 50 for `list_notes`. A larger value is rejected; for more than 20 matches, narrow the filters or page through `list_notes` with its cursor.
 2. Read relevant sections with `get_note`. Follow its cursor only when more source text is needed. If content changed, restart the section; do not stitch different versions together. Summary is generated text, while transcript is source text. Keep that distinction in the answer: label each statement by the section it came from. If the summary section is empty or unavailable, say so, then label facts taken from the transcript as transcript evidence. Never call transcript-derived text a summary, even when the user asks for one.
 3. Reason over the returned evidence yourself. Cite the returned note URLs. Do not call Magic Chat or imply it produced the answer.
